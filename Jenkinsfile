@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'mvn install'
+                bat 'mvn -DskipTests install'
             }
         }
         stage('Test') {
@@ -17,6 +17,7 @@ pipeline {
         stage('SonarQube') {
                     steps {
                         echo 'SonarQube..'
+                        sonar.login=sqp_0599cebbf73058e07b5dab8567d53f8253b369c8
                         bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
                     }
                 }
