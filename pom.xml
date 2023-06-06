@@ -68,8 +68,6 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.22.1</version>
                     <configuration>
-                        <parallel>classesAndMethods</parallel>
-                        <threadCount>4</threadCount>
                         <testFailureIgnore>true</testFailureIgnore>
                     </configuration>
                 </plugin>
