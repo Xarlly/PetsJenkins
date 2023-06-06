@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-
                 bat 'mvn install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                bat 'mvn test'
             }
         }
         stage('SonarQube') {
