@@ -18,7 +18,7 @@ pipeline {
                     steps {
                         echo 'SonarQube..'
                         withSonarQubeEnv('SonarQube') {
-                            bat "mvn clean verify sonar:sonar -Dsonar.projectKey=JenkinsPets -Dsonar.projectName='JenkinsPets'"
+                            bat 'mvn sonar:sonar -Dsonar.token=sqp_0599cebbf73058e07b5dab8567d53f8253b369c8'
                         }
                     }
                 }
