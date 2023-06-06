@@ -1,0 +1,26 @@
+Thumbs.db
+Desktop.ini
+
+# IntelliJ
+*.iml
+.idea/
+
+# Vscode
+.vscode
+
+# Maven
+target/
+
+# Gradle
+build/
+out/
+.gradle
+.nb-gradle
+
+# allure
+.allure
+
+# OpenDocument
+.~lock.*.odt#
+
+*derby.log
