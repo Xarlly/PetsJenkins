@@ -17,9 +17,8 @@ pipeline {
         stage('SonarQube') {
                     steps {
                         echo 'SonarQube..'
-                        def mvn = tool 'Default Maven';
                         withSonarQubeEnv('SonarQube') {
-                            bat "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=JenkinsPets -Dsonar.projectName='JenkinsPets'"
+                            bat "Default Maven/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=JenkinsPets -Dsonar.projectName='JenkinsPets'"
                         }
                     }
                 }
